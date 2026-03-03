@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setlhomara Malefo - Software Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="#home">Setlhomara Malefo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-section py-5">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-md-5 text-center">
+                    <img src="seth.jpg" class="img-fluid rounded-circle profile-image" alt="Setlhomara Malefo portrait">
+                </div>
+                <div class="col-md-7">
+                    <p class="text-uppercase small mb-2 section-label">Portfolio</p>
+                    <h1 class="display-5 fw-bold mb-3">Aspiring Software Developer</h1>
+                    <p class="lead mb-4">I am learning software development at Techbridle Foundation and building practical projects in web and AI solutions.</p>
+                    <a href="#projects" class="btn btn-primary btn-lg">View Projects</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="py-5">
+            <div class="container">
+                <h2 class="section-title mb-4">About Me</h2>
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-4">
+                        <img src="coding-image.jpg" class="img-fluid rounded-4 shadow-sm" alt="Code editor on laptop screen">
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="about-text">
+                            <p>
+                                I'm a passionate software developer with a strong interest in creating innovative solutions to
+                                real-world problems. I have experience in various programming languages and frameworks, and I'm
+                                always eager to learn new technologies.
+                            </p>
+                            <p>Through Techbridle Foundation, I am expanding my skills in technical problem-solving, communication, and collaborative project work.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                       
+            <section id="skills" class="py-5">
+            <div class="container">
+                <h2 class="section-title mb-4">Skills</h2>
+                <div class="row g-3">
+                    <div class="col-sm-6 col-lg-4"><div class="skill-card">HTML</div></div>
+                    <div class="col-sm-6 col-lg-4"><div class="skill-card">CSS</div></div>
+                    <div class="col-sm-6 col-lg-4"><div class="skill-card">JavaScript</div></div>
+                    <div class="col-sm-6 col-lg-4"><div class="skill-card">TypeScript & React</div></div>
+                    <div class="col-sm-6 col-lg-4"><div class="skill-card">C# & .NET</div></div>
+                    <div class="col-sm-6 col-lg-4"><div class="skill-card">SQL & NoSQL</div></div>
+                </div>
+            </div>
+        </section>
+         <section id="contact" class="py-5">
+            <div class="container">
+                <h2 class="section-title mb-4">Contact</h2>
+                <div class="row g-4">
+                    <div class="col-lg-5">
+                        <p><strong>Name:</strong> Setlhomara Malefo</p>
+                        <p><strong>Tel:</strong> <a href="tel:067-655-4149">067-655-4149</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:setlhomara.malefo@techbridlefoundation.org">setlhomara.malefo@techbridlefoundation.org</a></p>
+                        <p><strong>GitHub:</strong> <a href="https://github.com/sethmalefo-del" target="_blank" rel="noopener">sethmalefo-del</a></p>
+                    </div>
+                    <div class="col-lg-7">
+                        <form class="p-4 rounded-4 contact-form">
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="emailAddress" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="emailAddress" placeholder="name@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="topic" class="form-label">Topic</label>
+                                <select class="form-select" id="topic">
+                                    <option selected>Choose one</option>
+                                    <option>Portfolio Feedback</option>
+                                    <option>Project Collaboration</option>
+                                    <option>General Message</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Write your message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4 text-center border-top">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Setlhomara Malefo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+
+      
+

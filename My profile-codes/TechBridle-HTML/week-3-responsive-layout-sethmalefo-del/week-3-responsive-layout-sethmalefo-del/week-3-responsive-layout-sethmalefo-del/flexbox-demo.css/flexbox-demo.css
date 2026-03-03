@@ -1,0 +1,95 @@
+/* basic styling */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  scroll-behavior: smooth;
+}
+h1  {
+  color: #0e18a6;
+}
+.container {
+    background-color: #f3f6cd;
+    padding: 20px;
+    margin-bottom: 30px;
+    /* Flexbox activated */
+    display: flex;
+    /* new property #1 */
+    flex-direction: row;
+    /* new property #2 */ 
+    justify-content: space-around;
+}
+.item {
+    background-color: #b0ccdc;
+    color: rgb(33, 30, 30);
+    padding: 20px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    flex: 1; /* Each item takes equal space */
+    border: 2px solid #333; /* added border for better visibility */
+    text-align: center; /* Center text inside items */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+.navbar {
+    background-color: #a0c8ed;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background-color: #6663a0;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.nav-links a:hover {
+    background-color: #7c98d4;
+    transform: translateY(-2px);
+}
+.card {
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+button {
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+.features-intro {
+    margin: 0 0 1rem;
+    color: #333;
+    line-height: 1.6;
+    max-width: 60ch;
+}

@@ -1,0 +1,96 @@
+﻿/* My portfolio */
+:root {
+    --bg:#f4f7fb;
+    --surface:#ffffff;
+    --text: #1f2a37;
+    --accent: #1d6fdc;
+    --accent-dark: #1658ad;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family:"Poppins", sans-serif;
+    color: var(--text);
+    background:linear-gradient(160deg, #eef4ff 0%, #f9fbfe 100%);
+}
+
+.custom-navbar {
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+}
+section {
+    padding: 60px 0;
+}
+.navbar .nav-link {
+  color: var(--text);
+  font-weight:500;
+  transition:color 0.25s ease;
+}
+
+.navbar .nav-link:hover {
+.navbar .nav-link:focus {
+color: var(--accent);
+}
+.navbar-brand:hover {
+    color: var(--accent-dark);
+}
+
+hero-section {
+    background: radial-gradient(circle at 20% 20%, #dbeafe 0%, #f4f7fb 50%, #ffffff 100%);
+}
+.section-label{
+    letter-spacing:0.1;
+    color:var(--muted);
+}
+.section-title{
+    font-weight:700;
+    color:#10233f;
+}
+.profile-image {
+    max-width: 260px;
+    border: 5px solid #ffffff;
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+}
+    section:nth-of-type(even) {
+        background-color: rgba(225,225,225,0.72);
+    }
+    .skill-card{
+        background:var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1rem;
+        font-weight: 600;
+        text-align:center;
+        transition:transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    project-card{
+        border:traslateY(-3px);
+box-shadow:0 4px 8px rgba(29,111,220,0.15);
+ }
+ project-card:hover {
+    border:1px solid var(--border);
+    transition:transform 0.25s ease, box-shadow 0.25s ease;
+ }
+project-card:hover{
+    transform: translateY(-5px);
+    box-shadow:0 14px 24px rgba(0,0,0,0.12);
+}
+.project-card .card-title{
+    color:#12335e;
+}
+#projects article:hover {
+  transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.btn-primary:hover {
+    background-color: #0b53d7;
+    border-color: #0b53d7;
+}
+a:hover {
+    text-decoration: underline;
+}
+}

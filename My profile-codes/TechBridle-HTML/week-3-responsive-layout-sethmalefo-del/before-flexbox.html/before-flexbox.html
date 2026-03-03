@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before Flexbox</title>
+     <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+        nav {
+            background-color: #ad7ccf;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            /* display flex*/
+            display: block;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .container{
+            display: flex;
+            gap: 0px;
+            margin-top: 20px;
+        }
+        </style>
+</head>
+        <body>
+        <h1>Without Flexbox</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="container">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+      </div> 
+ </body>
+</html>

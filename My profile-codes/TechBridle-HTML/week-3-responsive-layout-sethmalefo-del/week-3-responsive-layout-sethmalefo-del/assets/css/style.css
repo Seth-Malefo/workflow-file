@@ -1,0 +1,288 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --text: #1f2a37;
+  --muted: #5f6b7a;
+  --accent: #1d6fdc;
+  --accent-dark: #1658ad;
+  --border: #d8e2ef;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+  background: linear-gradient(160deg, #eef4ff 0%, #f9fbfe 100%);
+  min-height: 100vh;
+  overflow-x: clip;
+}
+
+/* NAVIGATION (Flexbox) */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgba(190, 219, 251, 0.8);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* PAGE LAYOUT (Grid) */
+.page-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "hero"
+    "features"
+    "testimonials"
+    "flexbox";
+  gap: 2rem;
+  width: min(100%, 1200px);
+  margin-inline: auto;
+}
+
+.page-layout > * {
+  min-width: 0;
+}
+
+.hero {
+  grid-area: hero;
+  text-align: center;
+  padding: 3rem 1rem;
+  background: radial-gradient(circle at 20% 20%, #dbeafe 0%, #f4f7fb 50%, #ffffff 100%);
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 3vw + 1rem, 3rem);
+  margin-bottom: 0.75rem;
+}
+
+.hero p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  background: #000;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background: #333;
+  transform: scale(1.05);
+}
+
+/* CARDS (Flexbox container + flex items) */
+.features,
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.features {
+  grid-area: features;
+}
+
+.testimonials {
+  grid-area: testimonials;
+}
+
+.card {
+  padding: 2rem;
+  background: #f4f4f4;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* FLEXBOX PRACTICE */
+#flexbox {
+  grid-area: flexbox;
+}
+
+.flexbox-title {
+  text-align: center;
+  margin: 0 0 1rem;
+}
+
+.container {
+  background-color: #f3f6cd;
+  padding: 20px;
+  margin: 0 1rem 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-radius: 12px;
+}
+
+.item {
+  background-color: #b64f8a;
+  color: #211e1e;
+  padding: 20px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  flex: 1 1 200px;
+  border: 2px solid #333;
+  text-align: center;
+  transition: transform 0.25s ease;
+}
+
+.item:hover {
+  transform: translateY(-3px);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #111;
+  color: #fff;
+}
+
+/* BREAKPOINT 1: Large Mobile */
+@media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+/* BREAKPOINT 2: Tablet */
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .features {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .features .card {
+    flex: 1 1 calc(50% - 1rem);
+  }
+
+  .testimonials {
+    flex-direction: row;
+  }
+
+  .testimonials .card {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+
+/* BREAKPOINT 3: Desktop */
+@media (min-width: 1024px) {
+  .page-layout {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "hero hero"
+      "features testimonials"
+      "flexbox flexbox";
+  }
+
+  .features .card {
+    flex: 1 1 calc(33.333% - 1rem);
+  }
+
+  .testimonials {
+    flex-direction: column;
+  }
+
+  .testimonials .card {
+    flex: 1 1 auto;
+  }
+}
+
+/* TINY VIEWPORT SAFETY */
+@media (max-width: 360px) {
+  .hero {
+    padding: 2rem 0.75rem;
+  }
+
+  .features,
+  .testimonials {
+    padding: 0.75rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .container {
+    margin: 0 0.75rem 1.25rem;
+    padding: 0.75rem;
+  }
+
+  .item {
+    flex-basis: 100%;
+    padding: 14px;
+    font-size: 1rem;
+  }
+}

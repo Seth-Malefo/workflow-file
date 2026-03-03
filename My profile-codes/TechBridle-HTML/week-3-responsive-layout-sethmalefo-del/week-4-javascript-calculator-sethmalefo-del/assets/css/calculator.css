@@ -1,0 +1,56 @@
+/* This is the CSS file for the calculator project. You can add styles to make your calculator look better! */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.calculator {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: min(360px, 92vw);
+}
+.display {
+    width: 50%;
+    height: 40px;
+    margin: 0 auto 10px auto;
+    text-align: right;
+    padding: 5px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.button {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #0056b3;
+}
+.button.operator {
+    background-color: #28a745;
+}
+.button.operator:hover {
+    background-color: #1e7e34;
+}
+.button.equal {
+    background-color: #a62431;
+}
+.button.equal:hover {
+    background-color: #c82333;
+}

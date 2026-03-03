@@ -1,0 +1,85 @@
+﻿/*My Portfolio*/
+:root {
+    --bg: #f4f7fb;
+    --surface: #ffffff;
+    --text: #1f2a37;
+    --muted: #5f6b7a;
+    --accent: #1d6fdc;
+    --accent-dark: #1658ad;
+    --border: #d8e2ef;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family:"Poppins", sans-serif;
+    color: var(--text);
+    background: linear-gradient(160deg, #eef4ff 0%, #f9fbfe 45%, #ffffff 100%);
+}
+section {
+    padding: 60px 0;
+}
+
+.navbar .nav-link {
+  color: var(--text);
+}
+
+.navbar .nav-link:hover {
+  color: #0a66f0;
+}
+
+#projects article:hover {
+  transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card {
+    border: 1px solid var(--border);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 24px rgba(0, 0, 0, 0.12);
+}
+
+.project-card .card-title {
+    color: #12335e;
+}
+
+.contact-form {
+    background: var(--surface);
+    border: 1px solid var(--border);
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 0.2rem rgba(29, 111, 220, 0.2);
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-dark);
+    text-decoration: underline;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--accent-dark);
+    border-color: var(--accent-dark);
+}
+
+footer {
+    color: var(--muted);
+}
